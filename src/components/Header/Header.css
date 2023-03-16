@@ -1,0 +1,33 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Size-Logo{
+    width: 85%!important;
+}
+.headerInputStyle{
+    border: none!important;
+    outline: none!important;
+}
+/* .search-header-icon svg{
+    stroke-width:3;
+} */
+.w-751{
+    width: 95%;
+}
+.search-header-icon input::placeholder{
+    
+    color:rgba(128, 128, 128, 0.639);
+    /* font-weight: 500; */
+}
+.border2{
+    border-bottom: 1px solid  rgba(128, 128, 128, 0.283);
+}
+.borderHeadr{
+    border-right: 2px solid rgba(128, 128, 128, 0.55);
+}
+.font-weightNormal{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #474747;
+    font-family: Arial, Helvetica, sans-serif;
+}
