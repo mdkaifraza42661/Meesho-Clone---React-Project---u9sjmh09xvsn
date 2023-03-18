@@ -31,3 +31,30 @@
     color: #474747;
     font-family: Arial, Helvetica, sans-serif;
 }
+.Download-App:hover{
+    color: #F43397;
+}
+.Download-Appboder {
+    /* padding-bottom: 10px; */
+    border-bottom: 2px solid #fdfdfd;
+}
+.Download-Appboder:hover {
+    /* padding-bottom: 10px; */
+    border-bottom: 2px solid #F43397;
+}
+.position-relative1{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.position-abolute1{
+    content: "";
+    position: absolute;
+    top: 75px;
+    left: 67px;
+    background-color: white;
+    border: 1px solid black;
+}

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img from './Images/k_Meeso_Logo.png';
+import gpy from './Images/kgpay.png'
 import {AiOutlineUser} from "react-icons/ai";
 import './Header.css'
 import {BiCart} from "react-icons/bi";
@@ -7,9 +8,16 @@ import MainHeader from '../MainHeader/MainHeader';
 import {ImMobile, ImSearch} from "react-icons/im";
 
 function Header() {
+    const [isDownloadHover, DownloadHovering] = useState("false")
+    function DownloadMouseOver() {
+        DownloadHovering(true)
+    }
+    function DownloadMouseLeave() {
+        DownloadHovering(false)
+    }
     return (
         <>
-            <div className="container-fluid border2 pb-3">
+            <div className="container-fluid border2 ">
                 <div className="container pt-md-2 ">
                     <div className="row align-items-center">
                         <div className="col-6 ps-0 ">
@@ -27,8 +35,23 @@ function Header() {
                         </div>
                         <div className="col-6 ">
                             <div className="row">
-                                <div className="col-4 d-flex align-items-center justify-content-end borderHeadr">
-                                    <div className="Download-App pe-2 d-flex align-items-center">  <ImMobile /><a href="#" className='text-decoration-none   ps-2 font-weightNormal'>Download App</a></div>
+                                <div className="col-4 d-flex align-items-center justify-content-end borderHeadr position-relative1" onMouseEnter={DownloadMouseOver} onMouseLeave={DownloadMouseLeave}>
+                                    <div className="Download-App pe-2 d-flex align-items-center ">  <ImMobile /><a href="#" className=' Download-App Download-Appboder text-decoration-none    ps-2 font-weightNormal'>Download App</a>
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                    {
+                                        isDownloadHover && (
+                                            <>
+                                                <div className='position-abolute1'>
+                                                    Download From a
+                                                    <img className='img-fluid' src={gpy} alt="" />
+                                                    <img className='img-fluid' src={gpy} alt="" />
+                                                </div>
+                                            </>
+                                        )
+                                    }
                                 </div>
                                 <div className="col-4 d-flex align-items-center justify-content-center borderHeadr">
                                     <div className="BecomeSuplier ">
@@ -39,8 +62,12 @@ function Header() {
                                 <div className="col-4">
                                     <div className="row">
                                         <div className="col-6 ">
-                                            <a href="#" className='d-flex justify-content-center align-items-center flex-column font-weightNormal text-decoration-none'><div><AiOutlineUser /></div>
-                                                <div className='font-weightNormal'>Profile</div></a>
+                                            <a href="#" className='d-flex justify-content-center align-items-center flex-column font-weightNormal text-decoration-none Download-App ' >
+
+                                                <div><AiOutlineUser />
+
+                                                </div>
+                                                <div className='font-weightNormal Download-App Download-Appboder' >Profile</div></a>
 
                                         </div>
                                         <div className="col-6 ">
