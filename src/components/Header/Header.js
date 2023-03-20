@@ -1,19 +1,29 @@
 import React, {useState} from 'react'
 import img from './Images/k_Meeso_Logo.png';
 import gpy from './Images/kgpay.png'
+import astr from './Images/appstorek.jpg'
 import {AiOutlineUser} from "react-icons/ai";
 import './Header.css'
 import {BiCart} from "react-icons/bi";
 import MainHeader from '../MainHeader/MainHeader';
 import {ImMobile, ImSearch} from "react-icons/im";
+import {Button} from 'bootstrap';
+import {BsBag} from "react-icons/bs";
 
 function Header() {
-    const [isDownloadHover, DownloadHovering] = useState("false")
+    const [isDownloadHover, DownloadHovering] = useState(false);
+    const [isProfileHover, ProfileHovering] = useState(false);
     function DownloadMouseOver() {
         DownloadHovering(true)
     }
     function DownloadMouseLeave() {
         DownloadHovering(false)
+    }
+    function Profieenter() {
+        ProfileHovering(true)
+    }
+    function ProfileLeave() {
+        ProfileHovering(false)
     }
     return (
         <>
@@ -34,9 +44,9 @@ function Header() {
 
                         </div>
                         <div className="col-6 ">
-                            <div className="row">
-                                <div className="col-4 d-flex align-items-center justify-content-end borderHeadr position-relative1" onMouseEnter={DownloadMouseOver} onMouseLeave={DownloadMouseLeave}>
-                                    <div className="Download-App pe-2 d-flex align-items-center ">  <ImMobile /><a href="#" className=' Download-App Download-Appboder text-decoration-none    ps-2 font-weightNormal'>Download App</a>
+                            <div className="row position-relative1">
+                                <div className="col-4 d-flex align-items-center justify-content-end borderHeadr " onMouseEnter={DownloadMouseOver} onMouseLeave={DownloadMouseLeave}>
+                                    <div className="Download-App pe-2  d-flex align-items-center ">  <ImMobile /><a href="#" className=' Download-App Download-Appboder text-decoration-none   py-3 ps-2 font-weightNormal'>Download App</a>
                                     </div>
                                     <div>
 
@@ -44,31 +54,47 @@ function Header() {
                                     {
                                         isDownloadHover && (
                                             <>
-                                                <div className='position-abolute1'>
-                                                    Download From a
-                                                    <img className='img-fluid' src={gpy} alt="" />
-                                                    <img className='img-fluid' src={gpy} alt="" />
+                                                <div className='position-abolute1 p-1 pb-3'>
+                                                    <h5 className='p-1'>Download From a</h5>
+                                                    <a href="#"> <img className='img-fluid' src={gpy} alt="" /></a>
+                                                    <a href="#"> <img className='img-fluid' src={astr} alt="" /></a>
+
                                                 </div>
                                             </>
                                         )
                                     }
                                 </div>
-                                <div className="col-4 d-flex align-items-center justify-content-center borderHeadr">
+                                <div className="col-4  d-flex align-items-center justify-content-center borderHeadr">
                                     <div className="BecomeSuplier ">
 
                                         <a href="#" className='font-weightNormal text-decoration-none'>Become a Supplier</a>
                                     </div>
                                 </div>
-                                <div className="col-4">
-                                    <div className="row">
-                                        <div className="col-6 ">
+                                <div className="col-4 ">
+                                    <div className="row    ">
+                                        <div className="col-6 " onMouseEnter={Profieenter} onMouseLeave={ProfileLeave}>
                                             <a href="#" className='d-flex justify-content-center align-items-center flex-column font-weightNormal text-decoration-none Download-App ' >
+                                                <div><AiOutlineUser /></div>
+                                                <div className='font-weightNormal Download-App Download-Appboder pb-2' >Profile</div>
+                                            </a>
+                                            {
+                                                isProfileHover && (
 
-                                                <div><AiOutlineUser />
+                                                    <div className='position-abolute12'>
+                                                        <p className='profileHellow'>Hello User</p>
+                                                        <p className='TOaccessAc'>To access your Meesho account</p>
+                                                        <button className='SignUpBtn btn'>Sign Up</button>
+                                                        <hr />
+                                                        <div >
+                                                            <a href="#" className='d-flex align-items-center text-decoration-none text-black fw-bold fs-5 '><BsBag />
+                                                                <p className='m-0 ps-2'>My Order</p></a>
+                                                        </div>
+                                                        {/* <p className='MyOrder'></p> */}
 
-                                                </div>
-                                                <div className='font-weightNormal Download-App Download-Appboder' >Profile</div></a>
+                                                    </div>
 
+                                                )
+                                            }
                                         </div>
                                         <div className="col-6 ">
                                             <a href="#" className='d-flex justify-content-center align-items-center flex-column font-weightNormal text-decoration-none'><div><BiCart /></div>
