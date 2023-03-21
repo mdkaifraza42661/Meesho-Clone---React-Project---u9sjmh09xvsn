@@ -5,6 +5,7 @@ import cod from './Images/cod.svg';
 import evn from './Images/freeDelivery.svg';
 import esyt from './Images/easyReturns.svg';
 import plst from './Images/playstoreSmallIcon.svg';
+import ProductsPage from '../productsPage/productsPage';
 import './Home.css'
 
 
@@ -30,7 +31,7 @@ const Home = () => {
                                     <img className='img-fluid1 ' src={cod} alt="" />
                                 </div>
                                 <div className='ps-3 fw-bold'>
-                                    <p className='m-0'>Free</p>
+                                    <p className='m-0'>Cash on</p>
                                     <p className='m-0'>Delivery</p>
                                 </div>
                             </Col>
@@ -39,20 +40,25 @@ const Home = () => {
                                     <img className='img-fluid1 ' src={esyt} alt="" />
                                 </div>
                                 <div className='ps-3 fw-bold'>
-                                    <p className='m-0'>Cash on</p>
-                                    <p className='m-0'>Delivery</p>
+                                    <p className='m-0'>Easy</p>
+                                    <p className='m-0'>Returns</p>
                                 </div>
                             </Col>
 
                         </Row>
-                        <div className='ps-5 pt-3'>
+                        <div className='ps-5 pt-4 mt-3'>
                             <button className='bgcolorbtn text-white btn w-50'> Dowload The Meesho App</button>
                         </div>
                     </Col>
-                    <Col>
+                    <Col className='d-flex justify-content-end'>
                         <img src={adv} className="img-fluid" alt="" />
                     </Col>
                 </Row>
+                <h1 className='py-5 text-center'>Products</h1>
+                <div className='d-flex flex-wrap justify-content-between pt-4'>
+
+                    <ProductsPage />
+                </div>
             </Container>
         </Container>
 
