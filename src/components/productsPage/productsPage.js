@@ -26,7 +26,7 @@ const productsPage = () => {
             {
                 list.map((ele) => {
                     return (
-                        <><Link to={`/product/:${ele.id}`} key={ele.id}>
+                        <><Link to={`/product/${ele.id}`} className='text-decoration-none text-black'>
                             <Card style={{width: '12rem'}} className="p-2 mt-2">
                                 <Card.Img variant="top" className='img-fluid' src={ele.image} />
                                 <Card.Body>

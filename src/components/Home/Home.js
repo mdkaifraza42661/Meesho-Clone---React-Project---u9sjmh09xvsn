@@ -7,11 +7,13 @@ import esyt from './Images/easyReturns.svg';
 import plst from './Images/playstoreSmallIcon.svg';
 import ProductsPage from '../productsPage/productsPage';
 import './Home.css'
+import Header from '../Header/Header';
 
 
 const Home = () => {
     return (
         <Container fluid>
+            <Header />
             <Container className='w-75'>
                 <Row className='mt-5 bgcolor'>
                     <Col>

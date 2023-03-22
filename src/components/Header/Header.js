@@ -9,6 +9,9 @@ import MainHeader from '../MainHeader/MainHeader';
 import {ImMobile, ImSearch} from "react-icons/im";
 import {Button} from 'bootstrap';
 import {BsBag} from "react-icons/bs";
+import {Link} from 'react-router-dom';
+import Singnup from '../SignUp/Singup';
+
 
 function Header() {
     const [isDownloadHover, DownloadHovering] = useState(false);
@@ -83,7 +86,9 @@ function Header() {
                                                     <div className='position-abolute12'>
                                                         <p className='profileHellow'>Hello User</p>
                                                         <p className='TOaccessAc'>To access your Meesho account</p>
-                                                        <button className='SignUpBtn btn'>Sign Up</button>
+                                                        <button className='SignUpBtn btn'>
+                                                            <Link to={'/Singnup'} className='text-white text-decoration-none bg-pink'>SignIn</Link>
+                                                        </button>
                                                         <hr />
                                                         <div >
                                                             <a href="#" className='d-flex align-items-center text-decoration-none text-black fw-bold fs-5 '><BsBag />
